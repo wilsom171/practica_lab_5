@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Practica</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="enter-user" id="enter-user">
+        <div class="form-user">
+            <p >BIENVENIDO AL CHAT</p>
+            <input type="text" placeholder="Ingrese su nombre" class="input-user" id="user" autocomplete="off">
+            <p class="message-input" id="message-input"></p>
+        </div>
+    </div>
+
+    <div id="content-menu" class="content-menu"></div>
+
+    <div class="container-chat">
+        <div class="container-usser-list">
+            <div class="title-chat">
+                <div class="content-img-profile">
+                    <img class="img-profile" id="img-profile-me" alt="">
+                </div>
+                <span id="me"></span>
+            </div>
+            <div class="content-users-list">
+                <ul class="list" id="users-list"></ul>
+            </div>
+        </div>
+        <div class="content-messages">
+            <div class="messages" id="messages-content"></div>
+            <div class="content-inputs">
+                <textarea name="" id="message" placeholder="Escriba un mensaje y presione enter" class="input-message"></textarea>
+                <input type="file" name="file" id="file-message" class="input-file">
+                <label for="file-message" class="btn-file">ENVIAR IMAGENES</label>
+            </div>
+        </div>
+    </div>
+    <button id="btnSend" class="btn btn-send"></button>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/validation_user.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
