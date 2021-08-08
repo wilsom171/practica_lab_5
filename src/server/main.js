@@ -7,7 +7,7 @@ const app = express()
 const server = http.createServer(app)
 const io = socket(server)
 
-app.set('port', process.env.PROT || 5000)
+app.set('port', process.env.port || 5000)
 app.use(express.static(path.join(__dirname, '../public')))
 
 require('./socket')(io)
