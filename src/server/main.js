@@ -7,11 +7,11 @@ const app = express()
 const server = http.createServer(app)
 const io = socket(server)
 
-app.set('port', process.env.PROT || 3000)
+app.set('port', process.env.PROT || 5000)
 app.use(express.static(path.join(__dirname, '../public')))
 
 require('./socket')(io)
 
 server.listen(app.get('port'), () => {
-  console.log('Server on localhost:3000')
+  console.log('Server on localhost:5000')
 })
